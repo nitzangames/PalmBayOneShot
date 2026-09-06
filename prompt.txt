@@ -1,0 +1,9 @@
+Build a complete, polished open-world driving sandbox in a browser.
+
+You are dropped into a small, colorful, sunlit city. You walk, steal almost any car you see, drive too fast through traffic, crash, wreck the car, get out, steal another, and keep going. That loop is the entire game. No missions, weapons, police, pedestrians, story, or music.
+
+Visual target: low-poly forms with clean flat-shaded surfaces and no texture noise. Strong readable silhouettes, exaggerated proportions, one committed time of day with long warm shadows. Color and proportion do the work that surface detail would do in a realistic game.
+
+This is an autonomous task. Do not stop at "it compiles." Plan, build, run, capture screenshots, critique them as a hostile reviewer would, fix, repeat — until it reads as a finished game, not a technical prototype.
+
+Automated reviewers will inspect your build with no human present. Building a way to drive it, capture it and check it — for them and for yourself — is part of the task. No checklist is coming; the quality bar is yours to set.
