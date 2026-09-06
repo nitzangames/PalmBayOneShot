@@ -1,0 +1,16 @@
+{
+  "name": "palm-bay-sandbox",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node --test tests/*.test.js",
+    "capture": "node scripts/capture.mjs",
+    "test:browser": "node scripts/playtest.mjs"
+  },
+  "dependencies": { "three": "0.180.0", "@fontsource/barlow-condensed": "5.3.0", "@fontsource/dm-sans": "5.3.0" },
+  "devDependencies": { "vite": "7.3.6", "@playwright/test": "1.55.1" }
+}

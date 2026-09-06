@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#f4ead7" />
+  <meta name="description" content="Palm Bay. A sun-soaked open-world driving sandbox. Take a car, take the coast, take your time." />
+  <title>Palm Bay — Take the long way.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect rx='24' width='100' height='100' fill='%23f2734c'/%3E%3Cpath d='M49 82L56 35M56 36Q20 7 13 44Q38 30 56 36M56 36Q82 9 91 39Q72 30 56 36M56 36Q29 39 27 61M56 36Q80 42 78 61' stroke='%23fff3da' fill='none' stroke-width='7'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <main id="app">
+    <canvas id="game" aria-label="Palm Bay driving game. Use W A S D to move, E to enter or exit cars, Space to handbrake." tabindex="0"></canvas>
+    <div id="vignette"></div>
+    <header class="topbar">
+      <div class="brand"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M21 39l4-24M25 16C16 3 4 7 4 17c8-6 14-4 21-1m0 0C32 3 42 8 41 17c-6-4-12-3-16-1m0 0C10 13 8 24 10 28c3-7 9-10 15-12m0 0c12-2 15 8 13 12-3-7-7-10-13-12"/></svg><div><h1>PALM BAY<span>FREE ROAM</span></h1><p>TAKE THE LONG WAY.</p></div></div>
+      <div class="top-actions"><span class="weather"><span class="sun-icon">☀</span> 27° <i></i> GOLDEN HOUR</span><button id="sound" class="icon-button" aria-label="Enable sound effects" title="Sound effects (M)"><svg viewBox="0 0 24 24"><path d="M11 4 6 8H3v8h3l5 4zM16 9l5 6m0-6-5 6"/></svg></button><button id="menu-button" class="icon-button" aria-label="Pause and controls" title="Pause (Escape)"><svg viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg></button></div>
+    </header>
+    <aside id="welcome"><span class="eyebrow">WELCOME TO THE GOOD LIFE</span><h2>Nowhere to be.<br>Everywhere to go.</h2><p>Find your ride. Make a little trouble.</p><button id="dismiss-welcome">Let’s roll <span>↗</span></button></aside>
+    <div id="location-banner"><span id="district">PALM AVENUE</span><span class="location-sub">PALM BAY, WEST COAST</span></div>
+    <div id="toast" role="status" aria-live="polite"><span id="toast-title"></span><span id="toast-sub"></span></div>
+    <section class="minimap-panel" aria-label="City minimap"><div class="map-top"><span><i></i> <span id="map-district">PALM AVENUE</span></span><span>N ↑</span></div><canvas id="minimap" width="340" height="280"></canvas><div class="map-bottom"><span><i class="you-dot"></i> YOU</span><span><i class="car-dot"></i> AVAILABLE RIDES</span></div></section>
+    <div id="interaction"><kbd>E</kbd><div><strong id="interact-title">Take the wheel</strong><span id="interact-detail">Comet GT · Sport coupe</span></div><span class="prompt-arrow">↗</span></div>
+    <div id="driving-tip">Your road. Your rules.</div>
+    <section id="telemetry" class="on-foot"><div class="vehicle-label"><span id="vehicle-class">ON FOOT</span><span id="vehicle-name">THE GOOD LIFE</span></div><div class="speed-display"><span id="speed">00</span><div><span>KM/H</span><strong id="gear">—</strong></div></div><div class="speed-ticks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="condition"><span id="condition-label">READY WHEN YOU ARE</span><span id="condition-value">∞</span></div><div class="condition-track"><div id="condition-fill"></div></div></section>
+    <footer class="controls"><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> <span id="move-label">Walk</span></span><span><kbd>E</kbd> <span id="enter-label">Enter car</span></span><span><kbd id="special-key">SHIFT</kbd> <span id="special-label">Run</span></span><span><kbd>C</kbd> Camera</span><span><kbd>ESC</kbd> Pause</span></footer>
+    <div id="touch-controls"><div class="touch-pad"><button data-key="KeyW">↑</button><button data-key="KeyA">←</button><button data-key="KeyS">↓</button><button data-key="KeyD">→</button></div><div class="touch-actions"><button data-key="Space">BRAKE</button><button id="touch-enter">E</button></div></div>
+    <div id="pause-overlay" class="overlay" hidden><section class="menu-card"><span class="eyebrow">NO HURRY. YOU’RE IN PALM BAY.</span><h2>Taking a breather.</h2><p>The city will be right here.</p><div class="control-grid"><span>Walk / drive</span><span>W A S D / arrows</span><span>Enter / leave a car</span><span>E</span><span>Run / handbrake</span><span>Shift / Space</span><span>Change camera</span><span>C</span><span>Look around</span><span>Drag the view</span><span>Horn / sound</span><span>H / M</span><span>Return car to the road</span><span>R</span><span>Hide interface</span><span>F2</span></div><button id="resume" class="primary">Back to the sunshine <span>↗</span></button><button id="restart" class="secondary">Start a fresh afternoon</button><p class="menu-footnote">No destination required.</p></section></div>
+    <div id="loading"><div class="loading-brand">PALM BAY</div><p>Finding a little sunshine…</p><div class="loading-line"></div></div>
+    <div id="fatal" hidden><h2>The city couldn’t start.</h2><p id="fatal-message"></p><button onclick="location.reload()">Try again</button></div>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -6,3 +6,7 @@ playwright-report/
 *.log
 .env
 .env.*
+dist/
+!source/artifacts/
+source/artifacts/*
+!source/artifacts/REVIEW.md
